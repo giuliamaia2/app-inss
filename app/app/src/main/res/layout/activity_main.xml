@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_titulo" />
 
     <EditText
-        android:id="@+id/et_reais"
+        android:id="@+id/et_salario"
         android:layout_width="290dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -43,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@id/et_nome" />
 
     <EditText
-        android:id="@+id/et_centavos"
+        android:id="@+id/et_outros"
         android:layout_width="290dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -52,24 +52,36 @@
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_reais" />
+        app:layout_constraintTop_toBottomOf="@id/et_salario" />
 
     <Button
         android:id="@+id/btn_calcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:onClick="calcular"
         android:text="Calcular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_centavos" />
+        app:layout_constraintTop_toBottomOf="@id/et_outros" />
 
     <TextView
         android:id="@+id/tv_resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_aliquota" />
+
+    <TextView
+        android:id="@+id/tv_aliquota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="18dp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
